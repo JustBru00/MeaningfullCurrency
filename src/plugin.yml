@@ -1,0 +1,8 @@
+main: com.gmail.justbru00.meaningfull.currency.main.Main
+name: MeaningfullCurrency
+version: 1.0
+authors: [JustBru00,Blackright709]
+commands:
+  bank:
+    description: A command that opens a players personal bank.
+    
