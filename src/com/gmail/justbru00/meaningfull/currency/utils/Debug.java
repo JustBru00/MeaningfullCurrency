@@ -9,7 +9,7 @@ public class Debug {
 
 	public static void send(String msg, Player player) {
 		if (main2.config.getBoolean("debug")) {
-		Messager.msgConsole("&8[&cError&8] &c" + msg);	
+		Messager.msgConsole("&8[&cDebug&8] &c" + msg);	
 		}
 	}
 	

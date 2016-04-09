@@ -45,6 +45,7 @@ public class Bank implements CommandExecutor {
 					main.config.set("store." + player.getUniqueId().toString() + ".bank." + j, new ItemStack(Material.AIR));
 					j++;
 				}
+				main.saveConfig();
 			}
 			
 			int i = 0;

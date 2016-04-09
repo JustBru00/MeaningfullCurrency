@@ -27,6 +27,11 @@
 #Debug Messages
 debug: false
 
+values:
+  iron_ingot: 100
+  gold_ingot: 1000
+  diamond: 10000
+
 commands:
   bank:
     no permission: '&cYou don''t have permission.'
