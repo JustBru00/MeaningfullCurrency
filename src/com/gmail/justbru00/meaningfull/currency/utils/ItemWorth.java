@@ -12,6 +12,7 @@ public class ItemWorth {
 		return;
 	}
 	
+	@SuppressWarnings("unused")
 	private static Main main2;
 	
 	public static int IRON_INGOT = 100;

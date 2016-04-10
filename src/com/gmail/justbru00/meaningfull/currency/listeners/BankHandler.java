@@ -16,7 +16,8 @@ public class BankHandler implements Listener {
 	public BankHandler(Main main) {
 		this.main = main;
 	}
-
+	
+	
 	@EventHandler
 	public void onInventoryClose(InventoryCloseEvent e) {
 		Inventory inv = e.getInventory();
@@ -31,7 +32,7 @@ public class BankHandler implements Listener {
 			
 			Debug.send("Starting to save inventory.", player);
 			
-			while(i<53) {
+			while(i<54) {
 				
 				main.config.set("store." + player.getUniqueId().toString() + ".bank." + i, inv.getItem(i));			
 				
@@ -45,8 +46,12 @@ public class BankHandler implements Listener {
 			i = 0;
 			int newbal = 0;
 			
-			while(i<53) {						
+			while(i<54) {	
+				
+				if (inv.getItem(i) != null) {
 				newbal = newbal + ItemWorth.calc(inv.getItem(i));
+				}
+				
 				i++;
 			}
 			
