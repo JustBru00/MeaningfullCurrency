@@ -49,6 +49,7 @@ public class Main extends JavaPlugin {
 		// Initialize Debug
 		Debug.initialize(this);
 		
+				
 		// Initialize ItemWorth
 		ItemWorth.initialize(this);
 				

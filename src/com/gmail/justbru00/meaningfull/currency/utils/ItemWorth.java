@@ -14,50 +14,50 @@ public class ItemWorth {
 	
 	private static Main main2;
 	
-	public static final int IRON_INGOT = main2.config.getInt("values.iron_ingot");
-	public static final int GOLD_INGOT = main2.config.getInt("values.gold_ingot");
-	public static final int DIAMOND = main2.config.getInt("values.diamond");	
+	public static int IRON_INGOT = 100;
+	public static int GOLD_INGOT = 1000;
+	public static int DIAMOND = 10000;	
 	
 	
 	public static int calc(ItemStack is) {
 		
-		Material temp = is.getType();
+		
 		int value = 0;
 		int i = 1;
 		
-		if (temp == Material.AIR) return value; // If AIR no value
+		if (is.getType() == Material.AIR) return value; // If AIR no value
 		
-		if (temp == Material.IRON_INGOT) {
+		if (is.getType() == Material.IRON_INGOT) {
 			while(is.getAmount() >= i) {
 				value = value + ItemWorth.IRON_INGOT;
 				i++;
 			} 
 			return value;
-		} else if (temp == Material.GOLD_INGOT) {
+		} else if (is.getType() == Material.GOLD_INGOT) {
 			while(is.getAmount() >= i) {
 				value = value + ItemWorth.GOLD_INGOT;
 				i++;
 			}
 			return value;
-		} else if (temp == Material.DIAMOND) {
+		} else if (is.getType() == Material.DIAMOND) {
 			while(is.getAmount() >= i) {
 				value = value + ItemWorth.DIAMOND;
 				i++;
 			}
 			return value;
-		} else if (temp == Material.IRON_BLOCK) {
+		} else if (is.getType() == Material.IRON_BLOCK) {
 			while(is.getAmount() >= i) {
 				value = value + (ItemWorth.IRON_INGOT * 9);
 				i++;
 			}
 			return value;
-		} else if (temp == Material.GOLD_BLOCK) {
+		} else if (is.getType() == Material.GOLD_BLOCK) {
 			while(is.getAmount() >= i) {
 				value = value + (ItemWorth.GOLD_INGOT * 9);
 				i++;
 			}
 			return value;
-		} else if (temp == Material.DIAMOND_BLOCK) {
+		} else if (is.getType() == Material.DIAMOND_BLOCK) {
 			while(is.getAmount() >= i) {
 				value = value + (ItemWorth.DIAMOND * 9);
 				i++;
