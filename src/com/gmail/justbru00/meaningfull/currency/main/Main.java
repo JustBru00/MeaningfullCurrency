@@ -49,7 +49,7 @@ public class Main extends JavaPlugin {
 	public static boolean debugMode = false;
 	public final String PLUGIN_VERSION = this.getDescription().getVersion();
 	public final List<String> PLUGIN_AUTHORS = this.getDescription().getAuthors();
-	public static Economy econ = null;
+	public static Economy econ = null
 
 	@Override
 	public void onDisable() {
