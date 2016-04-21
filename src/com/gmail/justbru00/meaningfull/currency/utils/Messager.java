@@ -39,7 +39,11 @@ public class Messager {
 	}
 	
 	public static void msgConsole(String msg) {
+		if (Main.console != null) {
 		Main.console.sendMessage(Main.PREFIX + Messager.color(msg));		
+		} else {
+			Main.log.info(ChatColor.stripColor(Messager.color(msg)));
+		}
 	}
 	
 	public static void msgPlayer(String msg, Player player) {

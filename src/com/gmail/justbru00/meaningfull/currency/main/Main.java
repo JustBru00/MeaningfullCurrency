@@ -25,6 +25,7 @@ SOFTWARE.
  
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
@@ -45,6 +46,7 @@ public class Main extends JavaPlugin {
 	
 	public static String PREFIX = Messager.color("&8[&bMeaningfull&fCurrency&8] &f");
 	public static ConsoleCommandSender console = Bukkit.getConsoleSender();	
+	public static Logger log = Bukkit.getLogger();
 	public FileConfiguration config = getConfig();
 	public static boolean debugMode = false;
 	public final String PLUGIN_VERSION = this.getDescription().getVersion();
